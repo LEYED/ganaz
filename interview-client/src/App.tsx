@@ -18,11 +18,11 @@ function App() {
 
             socket.addEventListener('open', function (event) {
                 console.log("websocket connected!")
-                setIsConnected(true);
             });
 
             socket.addEventListener('message', function (event) {
                 console.log(event.data);
+                setIsConnected(true);
                 addCall(event.data);
             });
         }
